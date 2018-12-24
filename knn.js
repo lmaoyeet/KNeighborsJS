@@ -26,7 +26,7 @@ function ScrappyKNN() {
     }
 }
 function euclidianDistance(a, b) {
-    return(sqrt(a - b));
+    return(Math.sqrt(a - b));
 }
 function accuracy(y_test, predictions) {
     this.accurate = [];
