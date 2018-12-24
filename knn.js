@@ -18,10 +18,10 @@ function ScrappyKNN() {
         for(var i = 1; i < this.X_train.length; i++) {
             this.dist = euclidianDistance(row, this.X_train[i]);
             if(this.dist < this.best_dist) {
-                this.best_dist = dist;
+                this.best_dist = this.dist;
                 this.best_index = i;
             }
-            return(this.y_train[best_index]);
+            return(this.y_train[this.best_index]);
         }
     }
 }
@@ -32,8 +32,9 @@ function accuracy(y_test, predictions) {
     this.accurate = [];
     this.finalAccuracy = 0;
     this.count = 0;
-    for(item in y_test) {
-        if(y_test[item] == predictions[item]) {
+    
+    for(var j = 0; j < y_test.length; j++/*item in y_test*/) {
+        if(y_test[j] == predictions[j]) {
             this.accurate.push(1);
         } else {
             this.accurate.push(0);
