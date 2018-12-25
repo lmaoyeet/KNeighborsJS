@@ -24,7 +24,7 @@ function train_test_split(x, y) {
             } else if(this.prob[item] < 0.5) {
                 // then put it in train
 
-                this.X_train.push([x[item]]);
+                this.X_train.push(x[item]);
             }
         
         }

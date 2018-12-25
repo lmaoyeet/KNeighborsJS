@@ -16,6 +16,6 @@ var my_knn = new ScrappyKNN();
 
 my_knn.fit(X_train, y_train);
 
-var predictions = my_knn.predict(X_test)
+var prediction = my_knn.predict(X_test);
 
-console.log(accuracy(y_test, predictions));
+//console.log(accuracy(y_test, prediction));
